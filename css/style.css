@@ -10,14 +10,13 @@ img{
     max-width: 100%;
 }
 
-.container{
+
+.flex-container{
+    display: flex;
     width: 70%;
     margin: 0 auto;
 }
 
-.flex-container{
-    display: flex;
-}
 
 html{
     font-size: 100%;
@@ -29,49 +28,114 @@ i{
     margin-left: 1em;
 }
 
+
 /* HEADER */
 
-header{
-    color: white;
-    background-color: #FF6900;
-    width: 100%;
-}
+    header{
+        color: white;
+        background-color: #FF6900;
+        width: 100%;
+    }
 
-.header-section{
-    width: calc(100% / 3);
-    height: 6em;
-    line-height: 6em;
-    font-size: 1.2em;
+    .header-section{
+        width: calc(100% / 3);
+        height: 5em;
+        line-height: 5em;
+        font-size: 1.2em;
 
-}
+    }
 
     /* section 1 */
 
-    .header-section ul{
-        list-style-type: none;
-    }
+        .header-section ul{
+            list-style-type: none;
+            justify-content: flex-start;
+        }
 
-    .header-section li{
-        margin-right: 1em;
-    }
+        .header-section li{
+            margin-right: 1em;
+        }
     /* /section 1 */
 
     /* section 2 */
 
-    .header-section:nth-child(2){
-        justify-content: center;
-        align-items: center;
-    }
-    
+        .header-section:nth-child(2){
+            justify-content: center;
+            align-items: center;
+        }
+        
     
     /* /section 2 */
 
-    .header-section:nth-child(3){
-        text-align: end;
-    }
-
+    
     /* section 3 */
+        .header-section:nth-child(3){
+            text-align: end;
+    
+        }
     
     /* /section 3 */
 
-    /* /HEADER */
+/* /HEADER */
+
+/* MAIN */
+    .row{
+        border: 2px dashed black;
+        background-color: #ff6;
+        margin-bottom: 2.5em;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .col{
+        border: 2px dashed black;
+        width: calc(100% / 3 - 2em);
+        background-color: aqua;
+        margin-top: 2.5em;
+    }
+
+    /* CARDS */
+       
+        /* IMG SECTION */
+            .img-section{
+                position: relative;
+            }
+
+            .lable-container{
+                position: absolute;
+                bottom: 2em;
+                left: 0.2em;
+            }
+
+            .lable{
+                display: inline-block;
+                padding: 0.4em;
+                font-weight: 600;
+                color: white;
+            }
+
+            .favourites{
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            .red{
+                background-color: #FF0000;
+            }
+
+            .green{
+                background-color: #008000;
+            }
+
+            .cards i{
+                color: black;
+                background-color: white;
+                padding: 0.5em;
+                font-size: 1.8em;
+            }
+        /* /IMG SECTION */
+
+    /* /CARDS */
+
+/* /MAIN */
